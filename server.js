@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 // Kết nối MongoDB với username là MSSV, password là MSSV, dbname là it4409
 mongoose
- .connect("")
+ .connect("mongodb+srv://20225270:20225270@cluster0.vj2wopo.mongodb.net/it4409")
  .then(() => console.log("Connected to MongoDB"))
  .catch((err) => console.error("MongoDB Error:", err));
 // TODO: Tạo Schema
@@ -190,4 +190,5 @@ app.delete("/api/users/:id", async (req, res) => {
 // Start server
 app.listen(3001, () => {
  console.log("Server running on http://localhost:3001");
+
 });
